@@ -16,9 +16,7 @@ See additional comments in the code.
 
 The dataset includes the following additional files:
 ====================================================
-- 'merged.csv': Extracted measurements on the mean and standard deviation for each of the features. 10299 rows X 81 columns.
-
-- 'averaged.csv': The mean of the extracted measurements calculated using the mean() function in R. 79 rows X 36 columns.
+- 'averaged.txt': The mean of the extracted measurements calculated using the mean() function in R. 79 rows X 36 columns.
 
 Information below is copied in full from the original README of the dataset
 ===========================================================================
