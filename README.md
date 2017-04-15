@@ -6,11 +6,16 @@ Merges the training and the test sets to create one data set. Also creates a sec
 tidy data set with the average of each variable for each activity and each subject.
 
 The file run_analysis.R can be in the same directory as the unzipped directory UCI HAR Dataset. Otherwise
-pass the path to this directory to the functions that need it. 
+pass the path to this directory. 
 
-To get a data frame of the merged data set call mergeAll(). 
-
-To get a data frame of the merged and averaged data set call mergeAverages(). 
+To get a txt file containing the data frame of the merged and averaged data set call 
+```
+writeOutput(filename="test.txt") 
+```
+or if the path to the files is another then
+```
+writeOutput(yourPath="C:\\Users\\path\\to\\files",filename="test.txt")
+``` 
 
 See additional comments in the code.
 
