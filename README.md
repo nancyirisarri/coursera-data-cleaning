@@ -1,4 +1,3 @@
-==================================================================
 Merged and averaged data from the
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
