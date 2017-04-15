@@ -8,8 +8,11 @@ tidy data set with the average of each variable for each activity and each subje
 The file run_analysis.R can be in the same directory as the unzipped directory UCI HAR Dataset. Otherwise
 pass the path to this directory to the functions that need it. 
 
-To get the merged data set call mergeAll(). To get the merged and averaged data set call mergeAverages(). See
-additional comments in the code.
+To get a data frame of the merged data set call mergeAll(). 
+
+To get a data frame of the merged and averaged data set call mergeAverages(). 
+
+See additional comments in the code.
 
 The dataset includes the following additional files:
 ====================================================
