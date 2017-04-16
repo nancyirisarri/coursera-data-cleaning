@@ -1,8 +1,12 @@
 Description
 ===========
 The orginal data set is the Human Activity Recognition Using Smartphones Dataset Version 1.0 described in 
-(http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). It was downloaded from 
-(https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+and downloaded from 
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 This repo contains files for merging the training and test sets to create one data set, averaging each variable per
 each activity and each subject.
@@ -14,8 +18,8 @@ The dataset includes the following files:
 
 See the code book for a full description of the measurements and table structure. Also additional comments in the R file.
 
-Generate the Data Set
-=====================
+How To Generate the Data Set
+============================
 The file run_analysis.R can be in the same directory as the unzipped directory UCI HAR Dataset. Optionally
 pass the path to this directory. 
 
