@@ -187,7 +187,7 @@ mergeAverages <- function(yourPath) {
   
   colnames(averages) <- c(activity_labels, subject_labels)
   
-  averages
+  t(averages)
 }
 
 writeOutput <- function(yourPath, filename) {
@@ -195,5 +195,5 @@ writeOutput <- function(yourPath, filename) {
   
   # Function to write the merged and averaged data to a file.
   
-  write.table(mergeAverages(yourPath), filename)
+  write.table(mergeAverages(yourPath), filename, row.name=FALSE)
 }
