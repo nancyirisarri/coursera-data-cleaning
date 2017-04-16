@@ -2,7 +2,7 @@ Processed Data
 ==============
 Extracts only the measurements on the mean and standard deviation for each of the measurements described in the 
 Feature Selection of the original data set. For each of the extracted measurements the average is calculated using the 
-mean() function in R. 
+`mean()` function in R. 
 
 Table Structure 
 ===============
@@ -16,7 +16,7 @@ Columns 1 to 6 are for each of the activity types. Columns 7 to 36 are for each 
 [31] "25"                 "26"                 "27"                 "28"                 "29"                 "30"          
 ```
 
-The 79 means are stored in rows, which have been renamed to make more human readable:
+Rows 1 to 79 contain the means, which have been renamed to make more human readable:
 ```
  [1] "tBodyAccMeanX"                "tBodyAccMeanY"                "tBodyAccMeanZ"                "tBodyAccStdX"                
  [5] "tBodyAccStdY"                 "tBodyAccStdZ"                 "tGravityAccMeanX"             "tGravityAccMeanY"            
