@@ -13,7 +13,7 @@ each activity and each subject.
 
 Included Files
 ==============
-The dataset includes the following files:
+The data set includes the following files:
 - 'averaged.txt': The mean of the extracted measurements calculated using the mean() function in R. 79 rows X 36 columns.
 
 See the code book for a full description of the measurements and table structure. Also additional comments in the R file.
