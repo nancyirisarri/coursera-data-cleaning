@@ -161,33 +161,35 @@ mergeAverages <- function(yourPath) {
   
   observations <- mergeAll(yourPath)
   
-  # Use these for the column names.
+  # Use these for looping through.
   activity_labels <- sort(unique(observations$activity))
   subject_labels <- sort(unique(observations$subject))
   
-  variables <- colnames(observations)
-  
   # Data frame to hold the object to return.
-  averages <- data.frame(row.names=variables[3:ncol(observations)])
-  
-  for (i in 3:ncol(observations)) {
-      
-    for (j in seq_along(activity_labels)) {
-      subobservations <- filter(observations, activity==activity_labels[j])
-      averages[i-2,j] <- mean(subobservations[,i], na.rm=TRUE)
-    }
+  averages <- data.frame()
 
-    for (k in seq_along(subject_labels)) {
-      subobservations <- filter(observations, subject==subject_labels[k])
-      averages[i-2,k+length(activity_labels)] <- mean(subobservations[,i], 
-                                                      na.rm=TRUE)
-    }
-    
+  counter <- 1
+  for (i in seq_along(subject_labels)) {
+      subject <- observations %>% filter(subject == i)
+      
+      for (j in seq_along(activity_labels)) {
+        averages[counter,1] <- subject_labels[i] # set the subject
+        averages[counter,2] <- activity_labels[j] # set the activity
+        
+        subject_activity <- subject %>% filter(activity == activity_labels[j]) %>% select(-(subject:activity))
+        
+        for (k in 1:ncol(subject_activity)) {
+          averages[counter,k+2] <- mean(subject_activity[,k], na.rm=TRUE)
+        }
+        
+        counter <- counter + 1
+      }
   }
   
-  colnames(averages) <- c(activity_labels, subject_labels)
   
-  t(averages)
+  colnames(averages) <- colnames(observations)
+  
+  averages
 }
 
 writeOutput <- function(yourPath, filename) {
